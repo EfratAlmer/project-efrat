@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גלריה</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="icon" href="../pictures/globus.ico" type="image/x-icon">
+</head>
+<body>
+    <header>   
+        <img src="../pictures/logo.png" alt="לוגו"  class="Phonelogo">
+        <div id="banner">
+           <nav class="navbar"  role= "navigation" id="myNavbar">
+               <ul>
+                   <li> <a href="./home.html"  class="nav-item">דף ראשי</a>  </li>   
+                   <li> <a href="./gallery.html"  class="nav-item">גלריה</a> </li>
+                   <li> <img src="../pictures/logo.png" alt="לוגו"  class="logo"> </li>
+                   <li> <a href="./about.html"  class="nav-item">אודות</a> </li>
+                   <li> <a href="./connect.html"  class="nav-item">צור קשר</a> </li>
+               </ul>
+                <!-- Burger -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i></a>
+           </nav>
+       </div>
+   </header>
+
+   <script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+
+<main>
+    <div class="galery">
+        <img src="../pictures/בודפשט.jpg" class="grid-item item1" alt="Budapest">
+        <img src="../pictures/וינה.jfif" class="grid-item item2" alt="Vinna">
+        <img src="../pictures/דובאי.jpg" class="grid-item item3" alt="Dubay">
+        <img src="../pictures/ChabadRodus.jpeg" class="grid-item item4" alt="Chabad Rodus">
+        <img src="../pictures/לונדון.jpg" class="grid-item item5" alt="London">
+        <img src="../pictures/לונדון 1.jfif" class="grid-item item6" alt="London">
+        <img src="../pictures/פריז 1.jfif" class="grid-item item7" alt="Paris">
+        <img src="../pictures/ChabadQoria.webp" class="grid-item item8" alt="Chabad Qoria">
+        <img src="../pictures/logo.png" class="grid-item item9" alt="Logo">
+        <img src="../pictures/פריז.jpg" class="grid-item item10" alt="Paris">
+        <img src="../pictures/synagugeWinna.jpg" class="grid-item item11" alt="synaguge in Winna">
+        <img src="../pictures/פראג.jfif" class="grid-item item12" alt="Prag">
+        <img src="../pictures/אירלנד 1.jfif" class="grid-item item13" alt="Irland">
+        <img src="../pictures/chabad.jpeg" class="grid-item item14" alt="chabad">
+        <img src="../pictures/דובאי 2.jpg" class="grid-item item15" alt="Dubay">
+        <img src="../pictures/חבד תאילנד.jpg" class="grid-item item16" alt="Chabad Tailand">
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+  body{
+    background-color: white;
+    margin: 0;
+  }
+  #banner{
+    background-color:white;
+  }
+
+  .navbar .icon {
+    display: none;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: auto;
+    align-items: center;
+    margin-top: 0%;
+  }
+  
+  .navbar li {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: auto;
+    align-items: center;
+    margin-top: 0%;
+  }
+  
+  .nav-item {
+    color:#0CC0DF;
+    font-size: 150%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none; 
+  }
+  
+  .logo {
+    /* max-width: 100%; 
+   max-height: 100%; */ 
+    width: 45%;
+    height: auto;
+    animation-delay: 3 s;
+    animation: rotate 15s infinite linear;
+  }
+  
+  .Phonelogo{
+    display: none;
+  }
+  
+  @keyframes rotate{
+  0%{transform: rotate(0deg);}
+  00%{transform:rotate(360deg);}
+  }
+
+  .container{
+    margin-top: 5%;
+  }
+
+  .galery{
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(5, auto);
+    padding: 10px;
+    gap: 2%;
+    margin-bottom: 10%;
+    grid-template-areas: 
+    'item1  item1  item4  item4  item4  item3  item3  item3  item15  item15'
+    'item2  item2  item2  item2  item5  item5  item6  item6  item15  item15'
+    'item2  item2  item2  item2  item8  item8  item6  item6  item15  item15'
+    'item7  item7  item16 item16 item9  item10 item10 item13 item13 item13'
+    'item11 item11 item11 item12 item14 item14 item14 item13 item13 item13'
+    ;
+  }
+
+
+.item1{grid-area: item1;}
+.item1 { grid-area: item1;}
+.item2 { grid-area: item2;}
+.item3 { grid-area: item3;}
+.item4 { grid-area: item4;}
+.item5 { grid-area: item5;}
+.item6 { grid-area: item6;}
+.item7 { grid-area: item7;}
+.item8 { grid-area: item8;}
+.item9 { grid-area: item9;}
+.item10{ grid-area: item10;}
+.item11{ grid-area: item11;}
+.item12{ grid-area: item12;}
+.item13{ grid-area: item13;}
+.item14{ grid-area: item14;}
+.item15{ grid-area: item15;}
+.item16{ grid-area: item16;}
+
+.grid-item{
+    max-width: 100%;
+    max-height: auto;
+    height: 100%; /* תמונה מתפשרת לגובה הפריט */
+    object-fit: cover; 
+    border-style: inherit;
+    border-radius: 3.5%;
+  }
+
+  .grid-item:hover{
+    opacity: 0.7;
+  }
+  .grid-item:active{
+   transform: scale(1.05);
+  }
+   
+  /* מדיה קווארי מותאם לטאבלט */
+  @media screen and (max-width: 1024px) {
+    .galery{
+      position: relative;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(7, auto);
+      grid-template-rows: repeat(7, auto);
+      padding: 10px;
+      gap: 2%;
+      margin-bottom: 10%;
+      grid-template-areas: 
+      'item1  item1  item4  item4  item4  item3   item3'
+      'item2  item2  item2  item5  item5  item15  item15'
+      'item8  item8  item8  item5  item5  item15  item15'        
+      'item6  item6  item7  item7  item7  item15  item15'
+      'item12 item12 item9  item9  item16  item16  item16'
+      'item12 item12 item10 item10 item13 item13  item13'
+      'item11 item11 item10 item10 item14 item14  item14'
+      ;
+    }
+  }
+
+/* מדיה קווארי מותאם לסמארטפון */
+ @media screen and (max-width: 728px) {
+  .galery{
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(8, auto);
+    padding: 10px;
+    gap: 2%;
+    margin-bottom: 10%;
+    grid-template-areas: 
+    'item1  item1  item5  item4'
+    'item3  item3  item3  item4'
+    'item2  item6  item6  item15'
+    'item7  item7  item9  item15'
+    'item8  item8  item14 item14'
+    'item13 item13 item13 item14'
+    'item10 item16 item16 item11'
+    'item10 item12 item12 item11'
+  }
+    /* זה מוריד את כל ה-נב */
+    .navbar {
+      display: none;
+    }
+    .Phonelogo{
+      display: block;
+      width: 25%;
+      height: auto;
+      margin-right: 4%;
+    }
+  }
+  
+  @media screen and (max-width: 728px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

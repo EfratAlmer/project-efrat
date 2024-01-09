@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר</title>
+    <link rel="stylesheet" href="../css/connect.css">
+    <link rel="shortcut icon" href="../pictures/טלפון.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>   
+        <div id="banner">
+           <nav class="navbar"  role= "navigation">
+               <ul>
+                   <li> <a href="./home.html"  class="nav-item">דף ראשי</a>  </li>   
+                   <li> <a href="./gallery.html"  class="nav-item">גלריה</a> </li>
+                   <li> <img src="../pictures/logo.png" alt="לוגו"  class="logo"> </li>
+                   <li> <a href="./about.html"  class="nav-item">אודות</a> </li>
+                   <li> <a href="./connect.html"  class="nav-item">צור קשר</a> </li>
+               </ul>
+           </nav>
+       </div>
+   </header>
+
+   <main>
+    <div class="form">
+        <form>
+            <h4>היי!
+                אם אתם מתכננים טיול ברחבי העולם,<br>
+                והמידע שיש באתר לא הספיק לכם,
+                אתם מוזמנים ליצור אתנו קשר אישי...<br>
+                ותמיד נשמח לעזור...<br>
+                אז תשאירו פרטים ונחזור אליכם עם מידע מדויק ונכון
+                </h4>
+        <fieldset>
+            <legend><h1>מתכננים טיול?</h1></legend>
+            <section class="username">
+                <label for="username"> שם:</label>
+                <br>
+                <input type="text" id="username" minlength="2" maxlength="20" required autofocus placeholder="נא מלא שם פרטי ומשפחה">
+            </section>
+    
+            <section class="usertel">
+                <label for="usertel"> טלפון:</label>
+                <br>
+                <input type="tel" id="usertel" placeholder="03-6161357" pattern="[0-9]{2}-[0-9]{7}">
+            </section>
+    
+            <section class="userphone">
+                <label for="userphone"> פלאפון:</label>
+                <br>
+                <input type="tel" id="userphone"  placeholder="055-6722355" pattern="[0-9]{3}-[0-9]{7}">
+            </section>
+    
+            <section class="usermail">
+                <label for usermail> מייל:</label>
+                <br>
+                <input type="email" id="usermail"  placeholder="example@gmail.com" required>
+            </section>
+    
+            <section class="destination">
+                <span>יש לכם כבר יעד?</span>
+                <br>
+                <input type="radio" id="yes" name="destination" value="yes"/>
+                <label for="yes">כן</label>
+                <input type="radio" id="no" name="destination" value="no"/>
+                <label for="no">לא</label>
+            </section>
+    
+            <section class="country_list" >
+                <label for="countries">רשימת היעדים שלנו</label>
+                <input type="text" list="country" id="countries" >
+                    <datalist id="country">
+                    <option value="ניו - יורק"></option>
+                    <option value="לונדון"></option>
+                    <option value="בודפסט"></option>
+                    <option value="הולנד"></option>
+                </datalist>
+            </section>
+            <br>
+            <input type="submit" class="my-button" value="ת'כננו לנו את החופשה">
+    
+        </fieldset>    
+        </form>
+    </div>    
+   </main>
+   <div class="airplane">
+    <img src="../pictures/airplane.png" alt="airplane" id="myAirplane">
+   </div>
+</body>
+</html>

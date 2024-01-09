@@ -1,0 +1,141 @@
+body {
+    background-color: white;
+    direction: rtl;
+}
+
+#banner {
+    background-color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: auto;
+    align-items: center;
+    margin-top: 0%;
+}
+
+.navbar li {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: auto;
+    align-items: center;
+    margin-top: 0%;
+}
+
+.nav-item {
+    color: #0CC0DF;
+    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+.logo {
+    width: 45%;
+    height: auto;
+    animation-delay: 3s;
+    animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+p{
+    position: relative;
+    justify-items: center;
+    text-align: center; /* יישם את הטקסט באמצע */
+    margin: auto; /* יישם מרווח אוטומטי מסביב לטופס */
+    font-size: large;
+    color: black;
+}
+strong{
+    font-size: large; 
+    text-align: center; /* יישם את הטקסט באמצע */
+    animation: colorChange 2s infinite alternate;
+    }
+    @keyframes colorChange {
+        0% {
+            color: #000; /* צבע התחלתי */
+        }
+        100% {
+            color: #0CC0DF; /* צבע התכלת */
+        }
+    } 
+h1{
+    color: #0CC0DF;
+    position: relative;
+    justify-items: center;
+    text-align: center; /* יישם את הטקסט באמצע */
+    margin: auto; /* יישם מרווח אוטומטי מסביב לטופס */
+    font-size: xx-large; 
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    gap: 2%;
+    overflow-x: auto;
+}
+.gallery img:hover {
+    transform: translateX(-10px); /* ייזוז לכיוון שמאל בעת hover */
+}
+/* קבוע כמה זמן תימשך האנימציה */
+@keyframes slideLeft {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(50);
+    }
+}
+
+/* קבוע כמה זמן יימשך האנימציה וכמה פעמים היא תתרחש */
+.gallery {
+    overflow-x: hidden; /* מונע חשיפת חלוקת התמונות מחוץ לגלריה */
+}
+
+.gallery img {
+    width: 85%;
+    height: 50%;
+    margin-right: 2%;
+    border-radius: 10px; /* מרובעות */
+    animation: slideLeft 7s ease-out; /* קבוע כמה זמן יימשך האנימציה */
+}
+
+
+    /* זה מוריד גם את הלוגו */
+    .navbar{
+      display: none;
+    }
+    .Phonelogo{
+      display: block;
+      width: 30%;
+      height: auto;
+      margin-right: 4%;
+    }
+  
+/* מדיה-קווריז עבור מסך ברוחב גדול מ-728px וקטן מ-1024px  לבדוק למה זה לא רספונסיבי טוב */
+@media only screen and (min-width: 450px) and (max-width: 730px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2%;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+    .gallery {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 2%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .gallery img {
+        width: 100%;
+    }
+}

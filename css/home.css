@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  direction: rtl;
+  background-color: white;
+}
+
+#banner{
+  background-color:white;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: auto;
+  align-items: center;
+  margin-top: 0%;
+}
+
+.navbar li {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: auto;
+  align-items: center;
+  margin-top: 0%;
+}
+
+.nav-item {
+  color:#0CC0DF;
+  font-size: 150%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none; 
+}
+
+.logo {
+  width: 45%;
+  height: auto;
+  animation-delay: 3 s;
+  animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate{
+0%{transform: rotate(0deg);}
+00%{transform:rotate(360deg);}
+}
+.Phonelogo{
+  display: none;
+}
+
+h3{
+  margin-left: 38%;
+  margin-right: 38%;
+}
+.container{
+  margin: 3%;
+  display: grid;
+  grid-template-columns: repeat(2 ,2.5fr);
+  justify-items: center;
+}
+
+.London, .Prague, .Switzerland, .Budapest{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  border-style: ridge;
+  width: fit-content;
+  height: fit-content;
+  margin: 5%;
+  text-align: center;
+}
+
+img{
+  width: 35.5vw;
+  height: 30vh;
+}
+
+/* class="p" */
+.p{
+  width: 35.5vw;
+}
+
+img:hover{
+  opacity: 0.8;
+}
+ /* כפתור עם אייקון - בית כנסת */
+#btnShul{
+  border: 1px solid transparent;
+  border-radius: 45%;
+  background: transparent;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+#content{
+  position: relative;
+  left: 100%;
+  margin-top: 10px;
+  border: 1px solid purple;
+  background: #ededed;
+  box-shadow: 0px 0px 3px #000;
+  width: 300px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visibility 0s .25s;
+}
+#btShul:focus + #content{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+a, p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  color: cornflowerblue;
+  text-decoration: none;
+}
+a:hover{
+  color: #000;
+}
+a{
+  color: blue;
+}
+@media screen and (max-width: 728px){
+  .container{
+    grid-template-columns: repeat(1 ,2.8fr);
+    margin: auto;
+  }
+  .London, .Prague, .Switzerland, .Budapest{
+    width: 80%;
+  }
+  img{
+    width: 100%;
+  }
+  .p{
+    width: 100%;
+  }
+  .navbar{
+    display: none;
+  }
+  .Phonelogo{
+    position: relative;
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-right: 4%;
+  }
+}

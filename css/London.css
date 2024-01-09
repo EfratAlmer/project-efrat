@@ -1,0 +1,99 @@
+body{
+    direction: rtl;
+}
+
+ /* תמונת רקע */
+.my-picture{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../pictures/London10.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3; 
+    z-index: -5; 
+}
+
+ /* כיתובים בית כנסת/מסעדה/בית חבד */
+h1{
+    text-align: center;
+}
+
+ /* קישורים */
+a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 140%;
+    color: cornflowerblue;
+    text-decoration: none;
+    text-align: center;
+}
+
+ /* קישורים - מעבר על */
+a:hover{
+    color: blue;
+}
+
+ /* קטע */
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+
+ /* nav */
+.navbar{
+    left: 1%;
+}
+
+ /* כפתור חזור */
+#menu{
+    width: 7vw;
+    height: 7vh;
+}
+
+ /* div אייקון + קטע */
+.phone, .adress{
+    display: flex;
+    justify-content: center;
+}
+
+  /* אייקונים */
+img{
+    width: 5%;
+    height: 5%;
+}
+
+ /* המיכל כולו */
+ .containerLondon{
+    margin: 5%;
+}
+
+/* ה-div של המידע */
+.item{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* רקע לבן שקוף */
+    background-color: rgba(255, 255, 255, 0.25);
+    border-style: hidden;
+    width: fit-content;
+    height: fit-content;
+    margin: 5%;
+    text-align: center;
+}
+
+/* ה-"div" של המידע - מעבר על */
+.item:hover{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* מדיה קווארי על האיקונים */
+@media screen and (max-width: 728px){
+    img{
+        width: 15%;
+        height: 15%;
+    }
+}
